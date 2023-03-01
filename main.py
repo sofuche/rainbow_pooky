@@ -5,7 +5,7 @@ from PyQt5.QtGui import QPainter, QPen, QColor
 from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton
 
 
-class Circles(QMainWindow):
+class Init(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUi()
@@ -14,6 +14,13 @@ class Circles(QMainWindow):
         self.setGeometry(100, 100, 600, 450)
         self.setWindowTitle('rainbow circles')
         self.pushButton = QPushButton('Хочу радугу', self)
+
+
+class Circles(Init):
+    def __init__(self):
+        super().__init__()
+        self.initUi()
+        
         self.pushButton.clicked.connect(self.run)
         self.do_paint = False
     
